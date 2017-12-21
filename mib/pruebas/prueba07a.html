@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- (7) Interacción con el árbol MIB-->
+<!-- Formulario Padre -->
+<HTML><HEAD></HEAD>
+
+<BODY>
+<FORM NAME="parentForm">
+<!-- El comando open abre una nueva ventana. Esta será la ventana hijo.-->
+<!-- childWindow es una referencia a la ventana hijo.-->
+<!-- opener es una referencia del padre que se entrega al hijo (childWindow)-->
+<!-- Para que a través del hijo se actualicen los campos del padre.-->
+
+<INPUT TYPE="button" VALUE="Open child" 
+  onClick="
+  childWindow=open('prueba07b.php','win2','resizable=no,width=200,height=400');
+    if (childWindow.opener == null) childWindow.opener = self;
+	">
+<BR><INPUT NAME="pf1" TYPE="TEXT" VALUE="">
+</FORM>
+</BODY></HTML>
